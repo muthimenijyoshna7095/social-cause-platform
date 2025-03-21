@@ -9,7 +9,7 @@ function App() {
   const [recommendation, setRecommendation] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/content')
+    axios.get('https://social-cause-backend.onrender.com/api/content')
       .then(res => setContent(res.data))
       .catch(err => console.log('Error fetching content:', err));
   }, []);
